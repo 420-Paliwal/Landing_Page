@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+*{
+  box-sizing: border-box;
+}
+
+#about_image {
+  background-image: linear-gradient( rgba(230, 75, 75, 0.5), rgba(0, 0, 230, 0)), url("../src/assets/about_image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50vh;
+  /* object-fit: cover; */
+}
