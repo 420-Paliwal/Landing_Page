@@ -1,6 +1,6 @@
 import React from 'react'
 // import aboutImage from '../assets/about_image.png' // Assuming you have an image in the assets folderb
-import icon from '../assets/icon.png' // Assuming you have an icon in the assets folder
+import icon from '../assets/Icon.png' // Assuming you have an icon in the assets folder
 import aboutLogo from '../assets/aboutLogo.png' // Assuming you have a logo in the assets folder
 const About = () => {
   return (
