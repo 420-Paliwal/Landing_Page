@@ -1,48 +1,50 @@
 import React from 'react'
-import boxImage from '../assets/customerBox.png' // Adjust the path as necessary
-import rectangleImage from '../assets/CustomerRectangle.png' // Adjust the path as necessary
-import sliderImage from '../assets/CustomerSlider.png' // Adjust the path as necessary
-import boxImage2 from '../assets/CustomerImageBox.png' // Adjust the path as necessary
-import customerImage from '../assets/CustomerImage.png' // Adjust the path as necessary
+import boxImage from '../assets/customerBox.png'
+import rectangleImage from '../assets/CustomerRectangle.png'
+import sliderImage from '../assets/CustomerSlider.png'
+import boxImage2 from '../assets/CustomerImageBox.png'
+import customerImage from '../assets/CustomerImage.png'
 
 const Customer = () => {
-    return (
-        <div className='mt-20'>
-            <div className="upper-box flex flex-col justify-start mb-10">
-                <h1 className='text-4xl font-bold'>Customer Testimonials</h1>
-                <p className='text-lg mt-3'>This tool has transformed my productivity and organization!</p>
-            </div>
+  return (
+    <div className="mt-20">
+      {/* Header Section */}
+      <div className="text-left mb-10">
+        <h1 className="text-3xl md:text-4xl font-bold">Customer Testimonials</h1>
+        <p className="text-md md:text-lg mt-2 text-gray-700">
+          This tool has transformed my productivity and organization!
+        </p>
+      </div>
 
-            <div className="mt-20 relative">
-                <div className="left-box">
-                    <img src={boxImage} alt="box-image" />
-                </div>
-                <div className="right-box flex items-center
-                justify-between p-10 absolute top-15 right-0 bottom-15 left-20 bg-white ">
-                    <div className="inner-box1 w-[50%]">
-                        <h1 className='text-2xl font-bold mb-4'>
-                            Using this website has made my tasks so much easier! I can't imagine my day without it.
-                        </h1>
-                        <div className="flex items-center gap-10 mt-10">
-                            <img src={rectangleImage} alt="Rectangle Image" />
-                            <div className="">
-                                <h1 className='text-xl font-bold'>Sherri Cronin</h1>
-                                <p className='text-lg'>Project Manager, TechCorp</p>
-                            </div>
-                        </div>
-                        <img src={sliderImage} alt="Slider Image" className="mt-10" />
-                    </div>
-
-                    <div className="inner-box2">
-                        <div className="flex items-center relative">
-                            <img src={boxImage2} alt="box-image" className=" mb-4 ml-2" />
-                            <img src={customerImage} alt="box-image" className="mb-4 absolute" />
-                        </div>
-                    </div>
-                </div>
+      {/* Testimonial Section */}
+      <div className="relative flex flex-col lg:flex-row items-center justify-between gap-20">
+        {/* Left Box with Border */}
+        <div className="relative w-full lg:w-1/2 border-4 border-[#ff3d57] border-r-0 p-6">
+          <h1 className="text-xl md:text-2xl font-bold mb-6">
+            Using this website has made my tasks so much easier! I can't imagine my day without it.
+          </h1>
+          <div className="flex items-center gap-6 mt-6">
+            <img src={rectangleImage} alt="User icon" className="" />
+            <div>
+              <h2 className="font-bold text-lg">Sherri Cronin</h2>
+              <p className="text-sm md:text-base text-gray-600">Project Manager, TechCorp</p>
             </div>
+          </div>
+          <img src={sliderImage} alt="Slider" className="mt-10 w-24 md:w-32" />
         </div>
-    )
+
+        {/* Right Image with Border */}
+        <div className="relative w-full lg:w-1/3 flex justify-center items-center p-2">
+          <img src={boxImage2} alt="Box Frame" className="w-full" />
+          <img
+            src={customerImage}
+            alt="Customer"
+            className="absolute top-0 left-0 w-full h-full object-cover p-10"
+          />
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Customer

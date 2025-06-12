@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Navbar from './components/Navbar'
 import GetStarted from './components/GetStarted'
 import About from './components/About'
@@ -7,8 +7,11 @@ import Process from './components/Process'
 import Customer from './components/Customer'
 import Origanization from './components/Origanization'
 import Footer from './components/Footer'
+import { FormContext } from './components/FormContext';
+import DataTable from './components/DataTable'
 
 const App = () => {
+  const { setFormData, formData } = useContext(FormContext);
   return (
     <div className='container mx-auto px-4'>
       <Navbar/>
@@ -18,6 +21,7 @@ const App = () => {
       <Process/>
       <Customer/>
       <Origanization/>
+      {formData.length > 0 && <DataTable/>}
       <Footer/>
     </div>
   )
